@@ -14,7 +14,7 @@ public class ConfigurationManager {
 		prop = new Properties();
 
 		try {
-				ip = new FileInputStream("./src/test/resources/config/config.properties");
+			  ip = new FileInputStream("./src/test/resources/config/config.properties");
 			} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
