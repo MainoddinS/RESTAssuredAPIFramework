@@ -5,7 +5,6 @@ import java.util.Properties;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-import client.RestClient;
 import configuration.ConfigurationManager;
 
 import io.restassured.RestAssured;
@@ -17,17 +16,17 @@ public class BaseTest {
 	
 	protected ConfigurationManager config;
 	protected Properties prop;
-	protected RestClient restClient;
 	protected String baseURI;
 	
-	@Parameters({"baseURI"})
+	
 	@BeforeTest
 	public void setUp(String baseURI) {
 		
 		config = new ConfigurationManager();
 		prop = config.initProp();
+		baseURI=prop.getProperty("BaseURI");
 		this.baseURI = baseURI;
-		
+		System.out.println(baseURI);
 	}
 	
 }
