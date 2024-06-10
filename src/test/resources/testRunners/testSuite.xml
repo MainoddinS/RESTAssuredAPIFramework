@@ -10,7 +10,7 @@
 		
 	 <test thread-count="5" name="Go Rest API Test">
 		<classes>
-			<class name="tests.GetUserTest" />
+			<class name="tests.CreateUserTest" />
 		</classes>
 	</test>
 
